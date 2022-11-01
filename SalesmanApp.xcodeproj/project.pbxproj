@@ -14,6 +14,13 @@
 		490CBFD6290FDF2A00DB124D /* SalesmanAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CBFD5290FDF2A00DB124D /* SalesmanAppTests.swift */; };
 		490CBFE0290FDF2A00DB124D /* SalesmanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CBFDF290FDF2A00DB124D /* SalesmanAppUITests.swift */; };
 		490CBFE2290FDF2A00DB124D /* SalesmanAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CBFE1290FDF2A00DB124D /* SalesmanAppUITestsLaunchTests.swift */; };
+		490CBFF0290FDFC800DB124D /* Salesman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CBFEF290FDFC700DB124D /* Salesman.swift */; };
+		490CBFF3290FE06800DB124D /* SalesmanRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CBFF2290FE06800DB124D /* SalesmanRepo.swift */; };
+		490CBFF5290FE78700DB124D /* SalesmanRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CBFF4290FE78700DB124D /* SalesmanRowView.swift */; };
+		490CBFF8290FEB3000DB124D /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CBFF7290FEB3000DB124D /* ColorExt.swift */; };
+		490CBFFA2910014D00DB124D /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CBFF92910014D00DB124D /* NavigationBarView.swift */; };
+		490CBFFC29100C1700DB124D /* SalesmanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CBFFB29100C1700DB124D /* SalesmanListView.swift */; };
+		490CBFFE29107A2800DB124D /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490CBFFD29107A2600DB124D /* StringExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		490CBFDB290FDF2A00DB124D /* SalesmanAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesmanAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		490CBFDF290FDF2A00DB124D /* SalesmanAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAppUITests.swift; sourceTree = "<group>"; };
 		490CBFE1290FDF2A00DB124D /* SalesmanAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		490CBFEF290FDFC700DB124D /* Salesman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesman.swift; sourceTree = "<group>"; };
+		490CBFF2290FE06800DB124D /* SalesmanRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanRepo.swift; sourceTree = "<group>"; };
+		490CBFF4290FE78700DB124D /* SalesmanRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanRowView.swift; sourceTree = "<group>"; };
+		490CBFF7290FEB3000DB124D /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
+		490CBFF92910014D00DB124D /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		490CBFFB29100C1700DB124D /* SalesmanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanListView.swift; sourceTree = "<group>"; };
+		490CBFFD29107A2600DB124D /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +109,13 @@
 			isa = PBXGroup;
 			children = (
 				490CBFC4290FDF2600DB124D /* SalesmanAppApp.swift */,
+				490CBFF92910014D00DB124D /* NavigationBarView.swift */,
 				490CBFC6290FDF2600DB124D /* ContentView.swift */,
+				490CBFFB29100C1700DB124D /* SalesmanListView.swift */,
+				490CBFF4290FE78700DB124D /* SalesmanRowView.swift */,
+				490CBFEE290FDFB400DB124D /* Models */,
+				490CBFF6290FEB0F00DB124D /* Helpers */,
+				490CBFF1290FE04F00DB124D /* Data */,
 				490CBFC8290FDF2900DB124D /* Assets.xcassets */,
 				490CBFCA290FDF2900DB124D /* Preview Content */,
 			);
@@ -125,6 +145,31 @@
 				490CBFE1290FDF2A00DB124D /* SalesmanAppUITestsLaunchTests.swift */,
 			);
 			path = SalesmanAppUITests;
+			sourceTree = "<group>";
+		};
+		490CBFEE290FDFB400DB124D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				490CBFEF290FDFC700DB124D /* Salesman.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		490CBFF1290FE04F00DB124D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				490CBFF2290FE06800DB124D /* SalesmanRepo.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		490CBFF6290FEB0F00DB124D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				490CBFF7290FEB3000DB124D /* ColorExt.swift */,
+				490CBFFD29107A2600DB124D /* StringExt.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +302,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490CBFF0290FDFC800DB124D /* Salesman.swift in Sources */,
+				490CBFF8290FEB3000DB124D /* ColorExt.swift in Sources */,
+				490CBFF5290FE78700DB124D /* SalesmanRowView.swift in Sources */,
 				490CBFC7290FDF2600DB124D /* ContentView.swift in Sources */,
+				490CBFFE29107A2800DB124D /* StringExt.swift in Sources */,
+				490CBFFC29100C1700DB124D /* SalesmanListView.swift in Sources */,
 				490CBFC5290FDF2600DB124D /* SalesmanAppApp.swift in Sources */,
+				490CBFFA2910014D00DB124D /* NavigationBarView.swift in Sources */,
+				490CBFF3290FE06800DB124D /* SalesmanRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -401,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -427,6 +479,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +509,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -13,10 +13,11 @@ fileprivate extension Color {
     static let circleLineSectionCollapsed = Color(hex: "#15438D1F")
     static let name = Color(hex: "#000000")
     static let areas = Color(hex: "#999999")
+    static let searchText = Color(hex: "#3C3C4399")
 }
 
 struct SalesmanRowView: View {
-    let item: Salesman
+    let salesman: Salesman
     @State var collapsed = true
     
     var circleStrokeColor: Color {
@@ -24,19 +25,19 @@ struct SalesmanRowView: View {
     }
     
     var firstLetterOfName: String {
-        guard let first = item.name.first else {
+        guard let first = salesman.name.first else {
             return ""
         }
         return String(first)
     }
     
     var name : String {
-        return item.name
+        return salesman.name
     }
     
     var areas: String {
         let firstArea = ""
-        return item.areas.reduce(firstArea) { (concatenatedAreas: String, nextArea: String) in
+        return salesman.areas.reduce(firstArea) { (concatenatedAreas: String, nextArea: String) in
             return concatenatedAreas + "" + nextArea
         }
     }
@@ -45,8 +46,6 @@ struct SalesmanRowView: View {
      https://sfsymbols.com/
      */
     var icon: Image {
-        
-        
         let down = Image(systemName: "chevron.down")
         let right = Image(systemName: "chevron.right")
         
@@ -55,7 +54,7 @@ struct SalesmanRowView: View {
     
     var body: some View {
         
-        HStack {
+        HStack(alignment: .center) {
             Text(firstLetterOfName)
                 .frame(width: 43, height: 42, alignment: .center)
                 .font(.custom("SF Pro", size: 20).weight(.regular))
@@ -64,31 +63,36 @@ struct SalesmanRowView: View {
                 .background(Color.circleBackground)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(circleStrokeColor, lineWidth: 1))
-            
+                .padding(.top, 17)
+                .padding(.bottom, 17)
             
             VStack(alignment: .leading, spacing: 0){
+                
                 Text(name)
                     .frame(height: 22, alignment: .top)
                     .font(.custom("SF Pro", size: 17).weight(.bold))
                     .foregroundColor(Color.name)
                 
-                Text(areas)
-                    .font(.custom("SF Pro", size: 15).weight(.bold))
-                    .foregroundColor(Color.areas)
+                if(collapsed) {
+                    Text(areas)
+                        .font(.custom("SF Pro", size: 15).weight(.bold))
+                        .foregroundColor(Color.areas)
+                }
             }
             
             Spacer()
             
-            icon
             
-//            Button {
-//                print("toggle cell collapsing")
-//                collapsed = !collapsed
-//            } label: {
-//                Text("^")
-//            }.padding(20)
+            
+            Button {
+                collapsed = !collapsed
+            } label: {
+                icon
+            }
+            .foregroundColor(Color.gray)
         }
     }
+    
 }
 
 struct SalesmanListItemView_Previews: PreviewProvider {
@@ -96,7 +100,8 @@ struct SalesmanListItemView_Previews: PreviewProvider {
         
         let salesmen = FakeSalesmanRepository().getSalesmen().first!
         
-        SalesmanRowView(item: salesmen)
+        SalesmanRowView(salesman: salesmen)
+            .previewLayout(.fixed(width: 375, height: 216))
     }
 }
 

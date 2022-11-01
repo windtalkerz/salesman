@@ -11,7 +11,10 @@ import SwiftUI
 struct SalesmanAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // Apps main viewModel
+            let contentViewViewModel = ContentView.ViewModel()
+            
+            ContentView(viewModel: contentViewViewModel)
         }
     }
 }
